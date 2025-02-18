@@ -1,4 +1,7 @@
-h1 {
-    font-size: medium;
-    color:rgb(228, 191, 143);
+
+h1{
+    font-size: 2em; /* Increased font size for better readability */
+    color: #E4BF8F; /* Ensure this color has good contrast with the background */
+    background-color: #000; /* Example background color for contrast */
 }
+
