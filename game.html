@@ -23,7 +23,7 @@
     <div id="buttons-container"></div>
 
     <script>
-        const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple'];
+        const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple', 'pink', 'brown', 'black', 'white', 'gray', 'cyan', 'magenta'];
         let correctColor = '';
 
         function generateButtons() {
@@ -46,10 +46,11 @@
 
         function checkColor(selectedColor) {
             if (selectedColor === correctColor) {
-                alert('Correct!');
+                alert('fly high!');
                 setRandomColor();
             } else {
-                alert('Try again!');
+                alert('random color!');
+                setRandomColor();
             }
         }
 
