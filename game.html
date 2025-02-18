@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Matching Game</title>
+    <style>
+        .color-button {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        #color-name {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="color-name"></div>
+    <div id="buttons-container"></div>
+
+    <script>
+        const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple'];
+        let correctColor = '';
+
+        function generateButtons() {
+            const buttonsContainer = document.getElementById('buttons-container');
+            buttonsContainer.innerHTML = '';
+            colors.forEach(color => {
+                const button = document.createElement('div');
+                button.className = 'color-button';
+                button.style.backgroundColor = color;
+                button.onclick = () => checkColor(color);
+                buttonsContainer.appendChild(button);
+            });
+        }
+
+        function setRandomColor() {
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            correctColor = colors[randomIndex];
+            document.getElementById('color-name').innerText = correctColor;
+        }
+
+        function checkColor(selectedColor) {
+            if (selectedColor === correctColor) {
+                alert('Correct!');
+                setRandomColor();
+            } else {
+                alert('Try again!');
+            }
+        }
+
+        // Initialize the game
+        generateButtons();
+        setRandomColor();
+    </script>
+</body>
+</html>
