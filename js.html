@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        #message {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic HTML with JavaScript</title>
@@ -8,12 +14,13 @@
 <body>
     <h1>Hello, World!</h1>
     <button onclick="displayMessage()">Click Me</button>
+    <div id="message"></div>
 
     <script>
         var counter = 2;
         function displayMessage() {
             counter = counter * 2;
-            alert('Hello from JavaScript!' + counter);
+            document.getElementById('message').innerText = 'The counter is ' + counter;
         
         }
     </script>
