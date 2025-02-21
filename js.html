@@ -10,8 +10,11 @@
     <button onclick="displayMessage()">Click Me</button>
 
     <script>
+        var counter = 0;
         function displayMessage() {
-            alert('Hello from JavaScript!');
+            counter = counter + 1;
+            alert('Hello from JavaScript!' + counter);
+        
         }
     </script>
 </body>
