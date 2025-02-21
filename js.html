@@ -22,14 +22,17 @@
         var counter = 0;
         function addOne() {
             counter = counter + 1;
-            document.getElementById('message').innerText = 'The counter is ' + counter;
+            updateMessage();
         }
         function subOne() {
             counter = counter - 1;
-            document.getElementById('message').innerText = 'The counter is ' + counter;
+            updateMessage();
         }
         function reset() {
             counter = 0;
+            updateMessage();
+        }
+        function updateMessage() {
             document.getElementById('message').innerText = 'The counter is ' + counter;
         }
     </script>
