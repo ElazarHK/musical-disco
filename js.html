@@ -15,6 +15,7 @@
     <h1>Hello, World!</h1>
     <button onclick="addOne()">Add one</button>
     <button onclick="multiTwo()">multiply</button>
+    <button onclick="divideTwo()">divide</button>
     <button onclick="subOne()">Subtract one</button>
     <button onclick="reset()">Reset</button>
     <div id="message"></div>
@@ -31,6 +32,10 @@
         }
         function reset() {
             counter = 0;
+            updateMessage();
+        }
+        function divideTwo() {
+            counter = counter / 2;
             updateMessage();
         }
         function multiTwo() {
