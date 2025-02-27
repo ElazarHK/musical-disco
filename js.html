@@ -26,6 +26,10 @@
 
     <script>
         function tank() {
+            // Add confetti effect
+            var confettiSettings = { target: 'confetti-canvas' };
+            var confetti = new ConfettiGenerator(confettiSettings);
+            confetti.render();
             var name = document.getElementById('name').value;
             if (name.length === 0) {
                 document.getElementById('message').innerText = 'please enter a name';
