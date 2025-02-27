@@ -18,9 +18,23 @@
     <button onclick="divideTwo()">divide</button>
     <button onclick="subOne()">Subtract one</button>
     <button onclick="reset()">Reset</button>
+    <div>
+        name: <input type="text" id="name"/>
+         <button onclick="tank()">tank</button>
+    </div>
     <div id="message"></div>
 
     <script>
+        function tank() {
+            var name = document.getElementById('name').value;
+            if (name.length === 0) {
+                document.getElementById('message').innerText = 'please enter a name';
+                
+                return;
+            } else {
+                document.getElementById('message').innerText = 'Hello, ' + name;
+            }
+        }
         var counter = 0;
         function addOne() {
             counter = counter + 1;
