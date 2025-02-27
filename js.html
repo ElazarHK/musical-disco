@@ -34,6 +34,13 @@
             } else {
                 document.getElementById('message').innerText = 'Hello, ' + name;
             }
+            if (name.length > 5) {
+                document.getElementById('message').style.color = 'green';
+            } else {
+                document.getElementById('message').style.color = 'red';
+            }
+        
+        
         }
         var counter = 0;
         function addOne() {
