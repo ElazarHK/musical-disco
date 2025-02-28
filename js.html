@@ -26,13 +26,20 @@
          
     </div>
     <div id="message"></div>
+    <div >
+        particleCount <input type="number" id="particleCount"/>
+        spread <input type="number" id="spread"/>
+        
+    </div>
 
     <script>
         function tank() {
             // Trigger confetti
+            var particleCount = document.getElementById('particleCount').value;
+            var spread = document.getElementById('spread').value;
             confetti({
-                particleCount: 250,
-                spread: 90,
+                particleCount: particleCount,
+                spread: spread,
                 origin: { y: 0.6 }
             });
             
