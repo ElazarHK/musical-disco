@@ -23,6 +23,7 @@
     <div>
         name: <input type="text" id="name"/>
          <button onclick="tank()">tank</button>
+         <button onclick="water()">water</button>
          
     </div>
     <div id="message"></div>
@@ -33,6 +34,15 @@
     </div>
 
     <script>
+        function water() {
+            // Trigger confetti
+            var particleCount = document.getElementById('particleCount').value;
+            let text = "";
+            for (let i = 0; i < particleCount; i++) {
+                text = text + "elazar with water gun ";
+            }
+            document.getElementById('message').innerText = text;
+        }
         function tank() {
             // Trigger confetti
             var particleCount = document.getElementById('particleCount').value;
