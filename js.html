@@ -51,7 +51,8 @@
             } else {
                 document.getElementById('message').innerText = 'Hello, ' + name;
             }
-            if (name.length > 5) {
+            var F16 = name.length > particleCount;
+            if (F16) {
                 document.getElementById('message').style.color = 'green';
             } else {
                 document.getElementById('message').style.color = 'red';
