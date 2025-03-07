@@ -48,10 +48,20 @@
 
         function checkColor(selectedColor) {
             if (selectedColor === correctColor) {
-                alert('fly high!');
+                const bee = document.createElement('div');
+                bee.innerHTML = '🐝';
+                bee.style.position = 'absolute';
+                bee.style.left = Math.random() * window.innerWidth + 'px';
+                bee.style.top = Math.random() * window.innerHeight + 'px';
+                document.body.appendChild(bee);
                 setRandomColor();
             } else {
-                alert('random color!');
+                const lava = document.createElement('div');
+                lava.innerHTML = '🔥';
+                lava.style.position = 'absolute';
+                lava.style.left = Math.random() * window.innerWidth + 'px';
+                lava.style.top = Math.random() * window.innerHeight + 'px';
+                document.body.appendChild(lava);
                 setRandomColor();
             }
         }
