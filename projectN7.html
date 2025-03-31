@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"> <head> 
+
+</head> <body>
+<h2>what is your age?</h2>
+<input type="number" id="age" />
+<button id="submit">submit</button>
+<script>
+    const age = document.getElementById("age");
+    const submit = document.getElementById("submit");
+    submit.onmouseover = () => {
+        if (age.value > 13) {
+          const body = document.querySelector("body");
+          body.style = "background-color: green";
+        } else {
+            const body = document.querySelector("body");
+            body.style = "background-color: red";
+        }
+        
+    }
+</script>
+</body></html>
+
+
